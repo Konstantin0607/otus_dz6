@@ -26,13 +26,13 @@ drwxr-xr-x. 2 root root   24 Aug 27 13:46 SPECS
 drwxr-xr-x. 2 root root    6 Aug 27 13:47 SRPMS
 ```
 В папке SPECS лежит spec-файл. Файл, который описывает что и как собирать.
-- Открываем файл ```nano SPECS/nginx.spec``` и добавляем в секцию %build необходимый нам модуль HTTPv2, который по умолчанию не собирается:
+- Открываем файл ```nano SPECS/nginx.spec``` и добавляем в секцию %build необходимый нам модуль OpenSSL:
 ```
 %build
 ./configure %{BASE_CONFIGURE_ARGS} \
     --with-cc-opt="%{WITH_CC_OPT}" \
     --with-ld-opt="%{WITH_LD_OPT}" \
-    --with-http_v2_module
+    --with-openssl=/root/rpmbuild/openssl-1.1.1c
 make %{?_smp_mflags}
 %{__mv} %{bdir}/objs/nginx \
     %{bdir}/objs/nginx-debug
