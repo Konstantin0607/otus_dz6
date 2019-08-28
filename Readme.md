@@ -91,7 +91,7 @@ percona-release.noarch                      0.1-6                      otus
 [root@lvm repo]# yum list | grep otus
 percona-release.noarch                      0.1-6                      @otus
 ```
-Важно: в случае когда мы удаляем или добавляем пакеты в наш репозиторий, нам необходимо выполнить ```createrepo наш <репозиторий>``` и ```createrepo --update <наш репозиторий>```, 
+Важно: в случае когда мы удаляем или добавляем пакеты в наш репозиторий, нам необходимо выполнить ```createrepo <наш репозиторий>``` и ```createrepo --update <наш репозиторий>```, 
 после чего на всякий случай можем выполнить ```yum clean all``` и теперь ```yum list --showduplicates | grep otus```
 
 [Ссылка на мануал]:https://www.howtoforge.com/how-to-build-nginx-from-source-on-centos-7/
