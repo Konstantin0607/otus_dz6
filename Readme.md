@@ -12,6 +12,8 @@
     Критерии оценки: 5 - есть репо и рпм
     +1 - сделан еще и докер образ
 
+##### Стенд со всеми этими операциями собирается в автоматическом режиме - [файл вагрант] и [сам скрипт].
+
 1. Создание своего RPM
 - Первым делом устанавливаем пакеты: ```yum install -y redhat-lsb-core wget rpmdevtools rpm-build createrepo yum-utils openssl-devel zlib-devel pcre-devel gcc```
 - Скачиваем src.rpm - ```wget https://nginx.org/packages/centos/7/SRPMS/nginx-1.14.1-1.el7_4.ngx.src.rpm```
@@ -93,3 +95,5 @@ percona-release.noarch                      0.1-6                      @otus
 после чего на всякий случай можем выполнить ```yum clean all``` и теперь ```yum list --showduplicates | grep otus```
 
 [Ссылка на мануал]:https://www.howtoforge.com/how-to-build-nginx-from-source-on-centos-7/
+[файл вагрант]:https://github.com/staybox/otus_dz6/blob/master/Vagrantfile
+[сам скрипт]:https://github.com/staybox/otus_dz6/blob/master/installHW6.sh
